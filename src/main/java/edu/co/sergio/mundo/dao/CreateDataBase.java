@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  */
 public class CreateDataBase {
      public static void run(){
-          String sql = "CREATE TABLE Depto(id_depto integer,nom_depto varchar(40), PRIMARY KEY(id_depto))";
+          String sql = "CREATE TABLE Pers(nombre_Persona varchar(40),apellido_Persona varchar(40),PRIMARY KEY(nombre_Persona))";
           Connection connection = null;
             try {
                 connection = Conexion.getConnection();
@@ -26,7 +26,7 @@ public class CreateDataBase {
                 stmt.executeUpdate(sql);
                 
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex) {
              Logger.getLogger(CreateDataBase.class.getName()).log(Level.SEVERE, null, ex);
          }
