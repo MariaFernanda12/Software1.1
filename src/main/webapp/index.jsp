@@ -26,8 +26,8 @@ body {
      </div>
  
     <%
-       if( request.getAttribute("personas")!=null){
-          List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
+       if( request.getAttribute("persona")!=null){
+          List<Persona> persona  = (List<Persona>)request.getAttribute("persona");
            for (Persona persona : persona) {
          %>      
          <h1> <%=persona.getNombre_persona()%> </h1><br/> 
