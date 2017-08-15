@@ -56,7 +56,7 @@ public class PersonaDAO     {
 	        Persona registro= new Persona();
 	      
 	        nombre = rs.getString("nom_Persona");
-	        registro.setNom_Persona(nombre) ;
+	        registro.setNombre_Persona(nombre) ;
 	        
 	        personas.add(registro);
 	    }
@@ -83,7 +83,7 @@ public class PersonaDAO     {
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
-			preparedStmt.setInt (1, t.getNombre_Persona());
+			preparedStmt.setString (1, t.getNombre_Persona());
                         preparedStmt.setString (2, t.getApellido_Persona());
 			result= preparedStmt.execute();
 	    } catch (SQLException e) {
