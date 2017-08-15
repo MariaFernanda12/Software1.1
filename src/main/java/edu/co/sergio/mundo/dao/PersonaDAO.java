@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import edu.co.sergio.mundo.vo.Departamento;
+import edu.co.sergio.mundo.vo.Persona;
 import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,7 +26,7 @@ import java.util.logging.Logger;
  */
  
 
-public class PersonaDAO implements IBaseDatos<Departamento> {
+public class PersonaDAO     {
 
       
 	/**
@@ -71,7 +71,7 @@ public class PersonaDAO implements IBaseDatos<Departamento> {
 	}
 
 	
-	public boolean insert(persona t) {
+	public boolean insert(Persona t) {
 		boolean result=false;
 		Connection connection=null;
             try {
@@ -83,7 +83,7 @@ public class PersonaDAO implements IBaseDatos<Departamento> {
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
-			preparedStmt.setInt (1, t.getNombre_Persopna());
+			preparedStmt.setInt (1, t.getNombre_Persona());
                         preparedStmt.setString (2, t.getApellido_Persona());
 			result= preparedStmt.execute();
 	    } catch (SQLException e) {
