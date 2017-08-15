@@ -1,5 +1,6 @@
 import edu.co.sergio.mundo.dao.CreateDataBase;
 import java.io.File;
+import java.io.PrintStream;
 import org.glassfish.embeddable.CommandResult;
 import org.glassfish.embeddable.CommandRunner;
 import org.glassfish.embeddable.Deployer;
@@ -24,13 +25,13 @@ public class MainGlassfish {
         gfProps.setPort("http-listener", Integer.valueOf(webPort)); // refer
         gfProps.setProperty("domain-dir", "glassfishDomain");
 
-	GlassFish glassfish = GlassFishRuntime.bootstrap()
-			.newGlassFish(gfProps);
+	GlassFish glassfish;
+            glassfish = GlassFishRuntime.bootstrap().newGlassFish(gfProps);
 	glassfish.start();
 	CommandRunner runner = glassfish.getCommandRunner();
 	
         CommandResult result  = runner.run("set-log-level", "javax.enterprise.system.container.web=INFO:javax.enterprise.system.container.ejb=FINEST");
-        System.out.println("------output of set log level: " + result.getOutput());
+            PrintStream println = System.out.println("------output of set log level: " + result.getOutput());
 	Deployer deployer = glassfish.getDeployer();
 
       

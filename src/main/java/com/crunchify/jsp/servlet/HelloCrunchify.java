@@ -30,7 +30,7 @@ public class HelloCrunchify extends HttpServlet {
         
         //Listando la informacion  
         List<Persona> personas =  dao.findAll();
-        request.setAttribute("personas", personas);
+        request.setAttribute("persona", persona);
        
        
         //Redireccionando la informacion
