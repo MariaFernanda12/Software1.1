@@ -19,8 +19,8 @@ body {
 <body>
     <div align="center" style="margin-top: 50px;">
         <form action="CrunchifyServlet">
-           Nombre:  <input type="text" name="id" size="20px"> <br>
-            Apellido:  <input type="text" apellido="nombre" size="20px"> <br><br>
+           Nombre:  <input type="text" Nombre="Nombre" size="20px"> <br>
+            Apellido:  <input type="text" Apellido="Apellido" size="20px"> <br><br>
         <input type="submit" value="submit">
         </form>
      </div>
