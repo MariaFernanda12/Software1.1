@@ -31,7 +31,7 @@ public class MainGlassfish {
 	CommandRunner runner = glassfish.getCommandRunner();
 	
         CommandResult result  = runner.run("set-log-level", "javax.enterprise.system.container.web=INFO:javax.enterprise.system.container.ejb=FINEST");
-            PrintStream println = System.out.println("------output of set log level: " + result.getOutput());
+//            PrintStream println = System.out.println("------output of set log level: " + result.getOutput());
 	Deployer deployer = glassfish.getDeployer();
 
       
